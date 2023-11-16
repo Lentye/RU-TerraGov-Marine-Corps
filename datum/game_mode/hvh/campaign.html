@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;game_mode&#x2F;hvh&#x2F;campaign - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/game_mode/hvh/campaign.html#var">Var Details</a> - <a href="datum/game_mode/hvh/campaign.html#proc">Proc Details</a></header>
+<main>
+<h1>campaign <aside>/<a href="datum.html">datum</a>/<a href="datum/game_mode.html">game_mode</a>/<a href="datum/game_mode/hvh.html">hvh</a>/<a href="datum/game_mode/hvh/campaign.html">campaign</a></aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/game_mode/hvh/campaign.html#var/current_mission">current_mission</a></th><td>The current mission type being played</td></tr>
+            <tr><th><a href="datum/game_mode/hvh/campaign.html#var/stat_list">stat_list</a></th><td>campaign stats organised by faction</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/game_mode/hvh/campaign.html#proc/IsJobAvailable">IsJobAvailable</a></th><td>Check which jobs are valid, to add to the job selector menu</td></tr>
+            <tr><th><a href="datum/game_mode/hvh/campaign.html#proc/attempt_attrition_respawn">attempt_attrition_respawn</a></th><td>respawns the player if attrition points are available</td></tr>
+            <tr><th><a href="datum/game_mode/hvh/campaign.html#proc/attrition_respawn">attrition_respawn</a></th><td>Actually respawns the player, if still able</td></tr>
+            <tr><th><a href="datum/game_mode/hvh/campaign.html#proc/load_new_mission">load_new_mission</a></th><td>sets up the newly selected mission</td></tr>
+            <tr><th><a href="datum/game_mode/hvh/campaign.html#proc/register_faction_member">register_faction_member</a></th><td>Sets up newly spawned players with the campaign status verb</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/current_mission"><aside class="declaration">var </aside>current_mission
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/campaign_mission.html">campaign_mission</a></aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign.dm#L24">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign.dm 24"/></a></h3>
+        <p>The current mission type being played</p><h3 id="var/stat_list"><aside class="declaration">var </aside>stat_list
+            <aside>&ndash; /list/datum/faction_stats</aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign.dm#L26">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign.dm 26"/></a></h3>
+        <p>campaign stats organised by faction</p><h2 id="proc">Proc Details</h2><h3 id="proc/IsJobAvailable"><aside class="declaration">proc </aside>IsJobAvailable<aside>(/<a href="mob.html">mob</a>/candidate, /<a href="datum.html">datum</a>/<a href="datum/job.html">job</a>/job, faction) 
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign.dm#L221">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign.dm 221"/></a></aside>
+        </h3>
+        <p>Check which jobs are valid, to add to the job selector menu</p><h3 id="proc/attempt_attrition_respawn"><aside class="declaration">proc </aside>attempt_attrition_respawn<aside>(/<a href="mob.html">mob</a>/candidate) 
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign.dm#L116">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign.dm 116"/></a></aside>
+        </h3>
+        <p>respawns the player if attrition points are available</p><h3 id="proc/attrition_respawn"><aside class="declaration">proc </aside>attrition_respawn<aside>(/<a href="mob.html">mob</a>/<a href="mob/new_player.html">new_player</a>/ready_candidate, /<a href="datum.html">datum</a>/<a href="datum/job.html">job</a>/job_datum) 
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign.dm#L195">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign.dm 195"/></a></aside>
+        </h3>
+        <p>Actually respawns the player, if still able</p><h3 id="proc/load_new_mission"><aside class="declaration">proc </aside>load_new_mission<aside>(/<a href="datum.html">datum</a>/<a href="datum/campaign_mission.html">campaign_mission</a>/new_mission) 
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign.dm#L108">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign.dm 108"/></a></aside>
+        </h3>
+        <p>sets up the newly selected mission</p><h3 id="proc/register_faction_member"><aside class="declaration">proc </aside>register_faction_member<aside>(/<a href="datum.html">datum</a>/source, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/new_member) 
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign.dm#L243">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign.dm 243"/></a></aside>
+        </h3>
+        <p>Sets up newly spawned players with the campaign status verb</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/tree/fac39a7c913f9cf6e46b25aa2cd7426b989d49be">fac39a7</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

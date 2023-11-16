@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;faction_stats - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/faction_stats.html#var">Var Details</a> - <a href="datum/faction_stats.html#proc">Proc Details</a></header>
+<main>
+<h1>faction_stats <aside>/<a href="datum.html">datum</a>/<a href="datum/faction_stats.html">faction_stats</a></aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L60">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 60"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/faction_stats.html#var/active_attrition_points">active_attrition_points</a></th><td>How many attrition points have been dedicated to the current mission</td></tr>
+            <tr><th><a href="datum/faction_stats.html#var/attrition_gain_multiplier">attrition_gain_multiplier</a></th><td>Multiplier on the passive attrition point gain for this faction</td></tr>
+            <tr><th><a href="datum/faction_stats.html#var/available_missions">available_missions</a></th><td>Future missions this faction can currently choose from</td></tr>
+            <tr><th><a href="datum/faction_stats.html#var/faction">faction</a></th><td>The faction associated with these stats</td></tr>
+            <tr><th><a href="datum/faction_stats.html#var/faction_leader">faction_leader</a></th><td>The decision maker for this leader</td></tr>
+            <tr><th><a href="datum/faction_stats.html#var/faction_rewards">faction_rewards</a></th><td>List of all rewards the faction has earnt this campaign</td></tr>
+            <tr><th><a href="datum/faction_stats.html#var/finished_missions">finished_missions</a></th><td>Missions this faction has succesfully completed</td></tr>
+            <tr><th><a href="datum/faction_stats.html#var/purchasable_rewards">purchasable_rewards</a></th><td>List of all rewards the faction can currently purchase</td></tr>
+            <tr><th><a href="datum/faction_stats.html#var/stats_flags">stats_flags</a></th><td>Any special behavior flags for the faction</td></tr>
+            <tr><th><a href="datum/faction_stats.html#var/total_attrition_points">total_attrition_points</a></th><td>Dictates how many respawns this faction has access to overall</td></tr>
+            <tr><th><a href="datum/faction_stats.html#var/victory_points">victory_points</a></th><td>Victory points earned by this faction</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/faction_stats.html#proc/add_new_mission">add_new_mission</a></th><td>Adds a mission to the available mission pool</td></tr>
+            <tr><th><a href="datum/faction_stats.html#proc/add_reward">add_reward</a></th><td>Adds a new reward to the faction for use</td></tr>
+            <tr><th><a href="datum/faction_stats.html#proc/choose_faction_leader">choose_faction_leader</a></th><td>Elects a new faction leader</td></tr>
+            <tr><th><a href="datum/faction_stats.html#proc/generate_new_mission">generate_new_mission</a></th><td>Randomly adds a new mission to the available pool</td></tr>
+            <tr><th><a href="datum/faction_stats.html#proc/get_selector">get_selector</a></th><td>Returns the faction's leader, selecting one if none is available</td></tr>
+            <tr><th><a href="datum/faction_stats.html#proc/mission_end">mission_end</a></th><td>handles post mission wrap up for the faction</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/active_attrition_points"><aside class="declaration">var </aside>active_attrition_points
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L71">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 71"/></a></h3>
+        <p>How many attrition points have been dedicated to the current mission</p><h3 id="var/attrition_gain_multiplier"><aside class="declaration">var </aside>attrition_gain_multiplier
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L73">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 73"/></a></h3>
+        <p>Multiplier on the passive attrition point gain for this faction</p><h3 id="var/available_missions"><aside class="declaration">var </aside>available_missions
+            <aside>&ndash; /list/datum/campaign_mission</aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L75">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 75"/></a></h3>
+        <p>Future missions this faction can currently choose from</p><h3 id="var/faction"><aside class="declaration">var </aside>faction
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L63">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 63"/></a></h3>
+        <p>The faction associated with these stats</p><h3 id="var/faction_leader"><aside class="declaration">var </aside>faction_leader
+            <aside>&ndash; /<a href="mob.html">mob</a></aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L65">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 65"/></a></h3>
+        <p>The decision maker for this leader</p><h3 id="var/faction_rewards"><aside class="declaration">var </aside>faction_rewards
+            <aside>&ndash; /list/datum/campaign_reward</aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L79">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 79"/></a></h3>
+        <p>List of all rewards the faction has earnt this campaign</p><h3 id="var/finished_missions"><aside class="declaration">var </aside>finished_missions
+            <aside>&ndash; /list/datum/campaign_mission</aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L77">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 77"/></a></h3>
+        <p>Missions this faction has succesfully completed</p><h3 id="var/purchasable_rewards"><aside class="declaration">var </aside>purchasable_rewards
+            <aside>&ndash; /list/datum/campaign_reward</aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L81">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 81"/></a></h3>
+        <p>List of all rewards the faction can currently purchase</p><h3 id="var/stats_flags"><aside class="declaration">var </aside>stats_flags
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L83">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 83"/></a></h3>
+        <p>Any special behavior flags for the faction</p><h3 id="var/total_attrition_points"><aside class="declaration">var </aside>total_attrition_points
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L69">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 69"/></a></h3>
+        <p>Dictates how many respawns this faction has access to overall</p><h3 id="var/victory_points"><aside class="declaration">var </aside>victory_points
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L67">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 67"/></a></h3>
+        <p>Victory points earned by this faction</p><h2 id="proc">Proc Details</h2><h3 id="proc/add_new_mission"><aside class="declaration">proc </aside>add_new_mission<aside>(/<a href="datum.html">datum</a>/<a href="datum/campaign_mission.html">campaign_mission</a>/new_mission) 
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L110">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 110"/></a></aside>
+        </h3>
+        <p>Adds a mission to the available mission pool</p><h3 id="proc/add_reward"><aside class="declaration">proc </aside>add_reward<aside>(/<a href="datum.html">datum</a>/<a href="datum/campaign_reward.html">campaign_reward</a>/new_reward) 
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L146">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 146"/></a></aside>
+        </h3>
+        <p>Adds a new reward to the faction for use</p><h3 id="proc/choose_faction_leader"><aside class="declaration">proc </aside>choose_faction_leader<aside>() 
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L121">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 121"/></a></aside>
+        </h3>
+        <p>Elects a new faction leader</p><h3 id="proc/generate_new_mission"><aside class="declaration">proc </aside>generate_new_mission<aside>() 
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L102">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 102"/></a></aside>
+        </h3>
+        <p>Randomly adds a new mission to the available pool</p><h3 id="proc/get_selector"><aside class="declaration">proc </aside>get_selector<aside>() 
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L114">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 114"/></a></aside>
+        </h3>
+        <p>Returns the faction's leader, selecting one if none is available</p><h3 id="proc/mission_end"><aside class="declaration">proc </aside>mission_end<aside>(/<a href="datum.html">datum</a>/source, winning_faction) 
+        
+    
+            <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/blob/fac39a7c913f9cf6e46b25aa2cd7426b989d49be/code/datums/gamemodes/campaign/faction_stats.dm#L155">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;campaign&#x2F;faction_stats.dm 155"/></a></aside>
+        </h3>
+        <p>handles post mission wrap up for the faction</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/Cosmic-Overlord/RU-TerraGov-Marine-Corps/tree/fac39a7c913f9cf6e46b25aa2cd7426b989d49be">fac39a7</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>
