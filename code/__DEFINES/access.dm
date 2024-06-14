@@ -34,6 +34,7 @@ GLOBAL_LIST_EMPTY(all_req_one_access)
 #define ACCESS_MARINE_BRAVO 81
 #define ACCESS_MARINE_CHARLIE 82
 #define ACCESS_MARINE_DELTA 83
+#define ACCESS_MARINE_FOREIGN
 
 //Surface access levels
 #define ACCESS_CIVILIAN_PUBLIC 100

@@ -1,5 +1,6 @@
 GLOBAL_LIST_INIT(department_radio_prefixes, list(":", "."))
 
+/*RUTGMC EDIT START
 GLOBAL_LIST_INIT(department_radio_keys, list(
 	MODE_KEY_R_HAND = MODE_R_HAND,
 	MODE_KEY_L_HAND = MODE_L_HAND,
@@ -33,7 +34,7 @@ GLOBAL_LIST_INIT(department_radio_keys_som, list(
 	RADIO_KEY_CHARLIE = RADIO_CHANNEL_XRAY,
 	RADIO_KEY_DELTA = RADIO_CHANNEL_WHISKEY,
 ))
-
+END */
 /mob/living/proc/Ellipsis(original_msg, chance = 50, keep_words)
 	if(chance <= 0)
 		return "..."

@@ -1,0 +1,6 @@
+#define RADIO_CHANNEL_FOREIGN "Foreign"
+#define RADIO_CHANNEL_FOREIGNSOM "Foreign"
+#define RADIO_KEY_FOREIGN "f"
+#define RADIO_TOKEN_FOREIGN ":f"
+
+#define FREQ_FOREIGN 1368

@@ -53,3 +53,23 @@
 /obj/machinery/marine_selector/clothes/commander/Initialize(mapload)
 	. = ..()
 	listed_products = GLOB.commander_clothes_listed_products
+
+/obj/machinery/marine_selector/clothes/foreign
+	squad_tag = "Foreign"
+	req_access = list(ACCESS_MARINE_FOREIGN)
+
+/obj/machinery/marine_selector/clothes/engi/foreign
+	squad_tag = "Foreign"
+	req_access = list(ACCESS_MARINE_ENGPREP, ACCESS_MARINE_FOREIGN)
+
+/obj/machinery/marine_selector/clothes/medic/foreign
+	squad_tag = "Foreign"
+	req_access = list(ACCESS_MARINE_MEDPREP, ACCESS_MARINE_FOREIGN)
+
+/obj/machinery/marine_selector/clothes/gunner/foreign
+	squad_tag = "Foreign"
+	req_access = list(ACCESS_MARINE_SMARTPREP, ACCESS_MARINE_FOREIGN)
+
+/obj/machinery/marine_selector/clothes/leader/foreign
+	squad_tag = "Foreign"
+	req_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_FOREIGN)

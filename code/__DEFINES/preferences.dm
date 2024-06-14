@@ -158,6 +158,7 @@
 	"Bravo",\
 	"Charlie",\
 	"Delta",\
+	"Foreign Legion",\
 	"None"\
 	)
 

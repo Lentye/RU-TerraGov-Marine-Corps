@@ -99,3 +99,31 @@
 		RegisterSignal(user, COMSIG_MOB_SAY, PROC_REF(handle_speech))
 		loud = TRUE
 		balloon_alert(user, "Loud mode enabled")
+
+/obj/item/radio/headset/mainship/marine/foreign
+	icon = 'Modular_RUtgmc/icons/obj/items/radio.dmi'
+	name = "foreign legion marine radio headset"
+	icon_state = "headset_marine_foreign"
+	frequency = FREQ_FOREIGN
+	minimap_type = /datum/action/minimap/marine
+
+/obj/item/radio/headset/mainship/marine/foreign/LateInitialize()
+	. = ..()
+	camera.network += list("foreign")
+
+
+/obj/item/radio/headset/mainship/marine/foreign/lead
+	name = "foreign legion marine leader radio headset"
+	keyslot2 = /obj/item/encryptionkey/squadlead
+	use_command = TRUE
+	command = TRUE
+
+
+/obj/item/radio/headset/mainship/marine/foreign/engi
+	name = "foreign legion marine engineer radio headset"
+	keyslot2 = /obj/item/encryptionkey/engi
+
+
+/obj/item/radio/headset/mainship/marine/foreign/med
+	name = "foreign legion marine corpsman radio headset"
+	keyslot2 = /obj/item/encryptionkey/med

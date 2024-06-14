@@ -13,3 +13,11 @@
 
 		var/icon_state = lowertext(name) + "_" + state
 		GLOB.minimap_icons[icon_state] = icon2base64(top)
+
+/datum/squad/foreign
+	name = "Foreign"
+	id = FOREIGN_SQUAD
+	color = "#042b13"
+	access = list(ACCESS_MARINE_FOREIGN)
+	radio_freq = FREQ_FOREIGN
+

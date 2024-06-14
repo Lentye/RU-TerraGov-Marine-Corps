@@ -50,6 +50,10 @@
 							dat += " delta"
 							network = list("delta")
 							req_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DELTA)
+						if("Foreign Legion")
+							dat += " foreign"
+							network = list("foreign")
+							req_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_FOREIGN)
 				dat += " squad leader's"
 			if(/datum/job/terragov/command/captain)
 				dat += " captain's"
@@ -237,6 +241,11 @@
 	name = "delta hud tablet"
 	network = list("delta")
 	req_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DELTA)
+
+/obj/item/hud_tablet/foreign
+	name = "foreign legion's hud ablet"
+	network = list("foreign")
+	req_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_FOREIGN)
 
 /obj/item/hud_tablet/leadership
 	name = "captain's hud tablet"
