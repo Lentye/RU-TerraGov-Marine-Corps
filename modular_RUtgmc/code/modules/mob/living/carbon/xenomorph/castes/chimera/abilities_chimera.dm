@@ -43,6 +43,12 @@
 			to_chat(owner, span_xenowarning("We cannot blink here!"))
 		return FALSE
 
+	var/fog = /obj/effect/forcefield/fog
+	for(var/i in ((owner.loc).contents))
+		if(istype(i, fog))
+			to_chat(owner, span_xenowarning("We cannot blink while on fog!"))
+			return FALSE
+
 
 	return TRUE
 
