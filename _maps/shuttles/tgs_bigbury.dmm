@@ -42,6 +42,9 @@
 /turf/closed/wall/mainship/outer/canterbury,
 /area/shuttle/canterbury/cic)
 "am" = (
+/obj/machinery/exportpad{
+	resistance_flags = 147
+	},
 /turf/open/floor/mainship/blue{
 	dir = 6
 	},

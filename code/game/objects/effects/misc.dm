@@ -106,6 +106,12 @@
 	if(isobj(mover)) //No grenades/bullets should cross this
 		return FALSE
 	if(isxeno(mover))
+//RUTGMC
+		if(isxenogorger(mover))
+			var/mob/living/carbon/xenomorph/gorger/gorger = mover
+			if(gorger.eaten_mob)
+				return FALSE
+//RUTGMC
 		return TRUE
 	if(ishuman(mover) && !issynth(mover))
 		var/mob/living/carbon/human/H = mover

@@ -26,6 +26,11 @@
 /obj/structure/xeno/silo/crash
 	resistance_flags = UNACIDABLE | DROPSHIP_IMMUNE | PLASMACUTTER_IMMUNE | INDESTRUCTIBLE
 
+/obj/structure/xeno/silo/crash/LateInitialize()
+	..()
+	var/mob/living/carbon/human/species/H = new(src.loc)
+	H.death()
+
 /obj/structure/xeno/acidwell
 	icon = 'modular_RUtgmc/icons/Xeno/acid_pool.dmi'
 	plane = FLOOR_PLANE

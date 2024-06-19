@@ -10,8 +10,9 @@
 /turf/open/floor/plating,
 /area/shuttle/canterbury/cic)
 "ad" = (
-/obj/structure/table/mainship,
-/obj/machinery/computer/security/marine_network,
+/obj/machinery/exportpad{
+	resistance_flags = 147
+	},
 /turf/open/floor/mainship/blue{
 	dir = 9
 	},
