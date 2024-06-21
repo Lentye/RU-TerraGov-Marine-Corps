@@ -48,7 +48,6 @@
 		/obj/item/ammo_magazine/smg/m25 = 3,
 		/obj/item/clothing/suit/armor/bulletproof = 2, // Synths might make use of it.
 		/obj/item/ammo_magazine/revolver/mateba = 2,
-		/obj/item/explosive/plastique = 5,
 	)
 	for(var/typepath in to_spawn)
 		for(var/i in 1 to to_spawn[typepath])
