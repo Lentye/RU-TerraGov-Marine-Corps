@@ -383,7 +383,7 @@ RUTGMC */
  * datum/source - the atom (in this case it should be a turf) sending the crossed signal
  * atom/movable/hostile - the atom that triggered the crossed signal, in this case we're looking for a mob
  */
- /* RUTGMC
+/* RUTGMC
 /obj/structure/xeno/hivemindcore/proc/hivemind_proxy_alert(datum/source, atom/movable/hostile)
 	SIGNAL_HANDLER
 	if(!COOLDOWN_CHECK(src, hivemind_proxy_alert_cooldown)) //Proxy alert triggered too recently; abort
