@@ -143,6 +143,7 @@
 			/obj/item/armor_module/armor/cape = -1,
 			/obj/item/armor_module/armor/cape/kama = -1,
 			/obj/item/armor_module/module/pt_belt = -1,
+			/obj/item/clothing/suit/xenos = -1,
 		),
 		"Gloves" = list(
 			/obj/item/clothing/gloves/marine = -1,
@@ -243,6 +244,7 @@
 			/obj/item/clothing/head/garrisoncap = -1,
 			/obj/item/clothing/head/serviceberet = -1,
 			/obj/item/clothing/head/servicecap = -1,
+			/obj/item/clothing/head/xenos = -1,
 		),
 		"Masks" = list(
 			/obj/item/clothing/mask/rebreather/scarf = -1,
