@@ -419,9 +419,8 @@
 			owner.balloon_alert(owner, "Target not adjacent")
 		return FALSE
 	//RUTGMC
-	var/fog = /obj/effect/forcefield/fog
-	for(var/i in ((owner.loc).contents))
-		if(istype(i, fog))
+	for(var/obj/effect/forcefield/fog in range(1, owner_xeno))
+		if(!silent)
 			to_chat(owner, span_xenowarning("We cant toss while on fog"))
 			return FALSE
 	//RUTGMC
