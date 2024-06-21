@@ -418,6 +418,19 @@ engineer, construction, leadership, medical, surgery, pilot, police, powerloader
 	powerloader = SKILL_POWERLOADER_PRO
 	leadership = SKILL_LEAD_TRAINED
 
+/datum/skills/inof
+	name = INTEL_OFFICER
+	cqc = SKILL_CQC_TRAINED
+	melee_weapons = SKILL_MELEE_TRAINED
+	smgs = SKILL_SMGS_TRAINED
+	shotguns = SKILL_SHOTGUNS_TRAINED
+	engineer = SKILL_ENGINEER_ENGI
+	construction = SKILL_CONSTRUCTION_PLASTEEL
+	leadership = SKILL_LEAD_TRAINED
+	medical = SKILL_MEDICAL_PRACTICED
+	police = SKILL_POLICE_MP
+	stamina = SKILL_STAMINA_TRAINED
+
 /datum/skills/mech_pilot
 	name = MECH_PILOT
 	engineer = SKILL_ENGINEER_METAL

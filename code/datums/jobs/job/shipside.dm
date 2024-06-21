@@ -396,6 +396,89 @@ Though you are a warrant officer, your authority is limited to the dropship and 
 	r_store = /obj/item/storage/pouch/general/large
 	l_store = /obj/item/hud_tablet/pilot
 
+//Field Commander
+/datum/job/terragov/command/intel_officer
+	title = INTELLIGENCE_OFFICER
+	req_admin_notify = TRUE
+	paygrade = "O3"
+	comm_title = "INOF"
+	total_positions = 1
+	skills_type = /datum/skills/inof
+	access = ALL_MARINE_ACCESS
+	minimal_access = ALL_MARINE_ACCESS
+	display_order = JOB_DISPLAY_ORDER_CORPORATE_LIAISON
+	outfit = /datum/outfit/job/command/fieldcommander
+	multiple_outfits = FALSE
+	outfits = list(
+		/datum/outfit/job/command/fieldcommander,
+		/datum/outfit/job/command/fieldcommander/robot,
+	)
+	exp_requirements = XP_REQ_EXPERT
+	exp_type = EXP_TYPE_COMMAND
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_BOLD_NAME_ON_SELECTION|JOB_FLAG_PROVIDES_SQUAD_HUD|JOB_FLAG_CAN_SEE_ORDERS|JOB_FLAG_LOUDER_TTS
+	jobworth = list(
+		/datum/job/xenomorph = LARVA_POINTS_STRONG,
+		/datum/job/terragov/squad/smartgunner = SMARTIE_POINTS_REGULAR,
+		/datum/job/terragov/silicon/synthetic = SYNTH_POINTS_REGULAR,
+		/datum/job/terragov/command/mech_pilot = MECH_POINTS_REGULAR,
+	)
+	html_description = {"
+		<b>Difficulty</b>:Very Hard<br /><br />
+		<b>You answer to the</b> Corporate Liaison and Field Commander<br /><br />
+		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Gamemode Availability</b>: Distress Signal, Nuclear War<br /><br /><br />
+		<b>Duty</b>: Gather intel and important items to corporation for rewards behind enemy's lines. Assist platoon advantage by sharing combat important information and marking enemy's fortifications, dont get yourself spotted or killed by any means. Be true commandos.
+	"}
+	minimap_icon = "intel_officer"
+
+/datum/job/terragov/command/intel_officer/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"You are charged with overseeing the operation on the ground, and are the highest-ranked deployed marine.
+Your duties are to ensure marines hold when ordered, and push when they are cowering behind barricades.
+Do not ask your men to do anything you would not do side by side with them.
+Make the TGMC proud!"})
+
+/datum/outfit/job/command/intel_officer
+	name = INTELLIGENCE_OFFICER
+	jobtype = /datum/job/terragov/command/intel_officer
+
+	id = /obj/item/card/id/silver
+	belt = /obj/item/storage/belt/marine/smg25ap
+	ears = /obj/item/radio/headset/mainship/mcom
+	w_uniform = /obj/item/clothing/under/marine/veteran/pmc/leader/inof
+	wear_suit = /obj/item/clothing/suit/storage/marine/veteran/pmc
+	shoes = /obj/item/clothing/shoes/marine/full
+	gloves = /obj/item/clothing/gloves/marine/veteran/pmc
+	head = /obj/item/clothing/head/helmet/marine/veteran/pmc
+	r_store = /obj/item/storage/pouch/tools/full
+	l_store = /obj/item/storage/pouch/electronics/inof
+	suit_store = /obj/item/weapon/gun/smg/m25/elite
+
+/datum/outfit/job/command/intel_officer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	. = ..()
+
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/binoculars/fire_support/campaign, SLOT_IN_ACCESSORY)
+
+	H.equip_to_slot_or_del(new /obj/item/stack/medical/heal_pack/gauze, SLOT_IN_SUIT)
+	H.equip_to_slot_or_del(new /obj/item/stack/medical/heal_pack/ointment, SLOT_IN_SUIT)
+	H.equip_to_slot_or_del(new /obj/item/reagent_containers/hypospray/autoinjector/isotonic, SLOT_IN_SUIT)
+	H.equip_to_slot_or_del(new /obj/item/reagent_containers/hypospray/autoinjector/quickclot, SLOT_IN_SUIT)
+	H.equip_to_slot_or_del(new /obj/item/reagent_containers/hypospray/autoinjector/dylovene, SLOT_IN_SUIT)
+
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/packet/acp, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/packet/acp, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/explosive/plastique, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/explosive/plastique, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/cloak, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/storage/box/MRE, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/reagent_containers/hypospray/autoinjector/combat_advanced, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, SLOT_IN_BACKPACK)
+
 //Mech pilot
 /datum/job/terragov/command/mech_pilot
 	title = MECH_PILOT

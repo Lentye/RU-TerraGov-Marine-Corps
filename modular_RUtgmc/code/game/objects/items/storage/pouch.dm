@@ -17,3 +17,12 @@
 /obj/item/storage/pouch/pistol/Initialize(mapload, ...)
 	. = ..()
 	AddComponent(/datum/component/tac_reload_storage)
+
+/obj/item/storage/pouch/electronics/inof/Initialize()
+	. = ..()
+	new /obj/item/circuitboard/apc(src)
+	new /obj/item/circuitboard/apc(src)
+	new /obj/item/circuitboard/apc(src)
+	new /obj/item/cell/high(src)
+	new /obj/item/cell/high(src)
+	new /obj/item/cell/high(src)

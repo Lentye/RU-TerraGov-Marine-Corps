@@ -51,3 +51,14 @@
 /obj/item/storage/belt/grenade/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/tac_reload_storage)
+
+/obj/item/storage/belt/marine/smg25ap
+
+/obj/item/storage/belt/marine/smg25ap/Initialize()
+	. = ..()
+	new /obj/item/ammo_magazine/smg/m25/ap(src)
+	new /obj/item/ammo_magazine/smg/m25/ap(src)
+	new /obj/item/ammo_magazine/smg/m25/ap(src)
+	new /obj/item/ammo_magazine/smg/m25/ap(src)
+	new /obj/item/ammo_magazine/smg/m25/ap(src)
+	new /obj/item/ammo_magazine/smg/m25/ap(src)
