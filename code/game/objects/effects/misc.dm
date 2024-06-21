@@ -107,10 +107,10 @@
 		return FALSE
 	if(isxeno(mover))
 //RUTGMC
-		if(isxenogorger(mover))
-			var/mob/living/carbon/xenomorph/gorger/gorger = mover
-			if(gorger.eaten_mob)
-				return FALSE
+		var/mob/living/carbon/xenomorph/xeno = mover
+		if(xeno.eaten_mob)
+			to_chat(xeno, span_warning("You cant pass while keeping swallowed body."))
+			return FALSE
 //RUTGMC
 		return TRUE
 	if(ishuman(mover) && !issynth(mover))

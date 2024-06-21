@@ -28,8 +28,27 @@
 
 /obj/structure/xeno/silo/crash/LateInitialize()
 	..()
-	var/mob/living/carbon/human/species/H = new(src.loc)
-	H.death()
+	var/mob/living/carbon/human/victim = new(loc)
+	SSmobs.stop_processing(victim)
+	GLOB.round_statistics.total_humans_created[victim.faction]-- //corpses don't count
+	SSblackbox.record_feedback("tally", "round_statistics", -1, "total_humans_created[victim.faction]")
+	victim.real_name = name
+	victim.death(silent = TRUE) //Kills the new mob
+	GLOB.dead_human_list -= victim
+	GLOB.dead_mob_list -= victim
+	GLOB.mob_list -= victim
+	GLOB.round_statistics.total_human_deaths[victim.faction]--
+	SSblackbox.record_feedback("tally", "round_statistics", -1, "total_human_deaths[victim.faction]")
+	victim.timeofdeath = -CONFIG_GET(number/revive_grace_period)
+	ADD_TRAIT(victim, TRAIT_PSY_DRAINED, TRAIT_PSY_DRAINED)
+	ADD_TRAIT(victim, TRAIT_UNDEFIBBABLE, TRAIT_UNDEFIBBABLE)
+	ADD_TRAIT(victim, TRAIT_MAPSPAWNED, TRAIT_MAPSPAWNED)
+	victim.med_hud_set_status()
+	var/datum/internal_organ/brain
+	brain = victim.internal_organs_by_name["brain"] //This removes (and later garbage collects) the organ. No brain means instant death.
+	victim.internal_organs_by_name -= "brain"
+	victim.internal_organs -= brain
+	victim.update_headbite()
 
 /obj/structure/xeno/acidwell
 	icon = 'modular_RUtgmc/icons/Xeno/acid_pool.dmi'
