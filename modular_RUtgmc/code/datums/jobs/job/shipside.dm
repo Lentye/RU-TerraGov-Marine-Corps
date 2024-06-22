@@ -156,3 +156,90 @@ Though you are a warrant officer, your authority is limited to the dropship and 
 /datum/job/terragov/command/staffofficer
 	exp_type = EXP_TYPE_REGULAR_ALL
 	exp_requirements = XP_REQ_EXPERIENCED
+
+//Intel Officer
+/datum/job/terragov/command/intel_officer
+	title = INTELLIGENCE_OFFICER
+	req_admin_notify = TRUE
+	paygrade = "O4"
+	comm_title = "INOF"
+	total_positions = 1
+	skills_type = /datum/skills/inof
+	access = ALL_MARINE_ACCESS
+	minimal_access = ALL_MARINE_ACCESS
+	display_order = JOB_DISPLAY_ORDER_CORPORATE_LIAISON
+	outfit = /datum/outfit/job/command/intel_officer
+	exp_requirements = XP_REQ_EXPERT
+	exp_type = EXP_TYPE_COMMAND
+	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_BOLD_NAME_ON_SELECTION|JOB_FLAG_PROVIDES_SQUAD_HUD|JOB_FLAG_CAN_SEE_ORDERS|JOB_FLAG_LOUDER_TTS
+	jobworth = list(
+		/datum/job/xenomorph = LARVA_POINTS_STRONG,
+		/datum/job/terragov/squad/smartgunner = SMARTIE_POINTS_REGULAR,
+		/datum/job/terragov/silicon/synthetic = SYNTH_POINTS_REGULAR,
+		/datum/job/terragov/command/mech_pilot = MECH_POINTS_REGULAR,
+	)
+	html_description = {"
+		<b>Difficulty</b>:Very Hard<br /><br />
+		<b>You answer to the</b> Corporate Liaison and Field Commander<br /><br />
+		<b>Unlock Requirement</b>: Starting Role<br /><br />
+		<b>Gamemode Availability</b>: Distress Signal, Nuclear War<br /><br /><br />
+		<b>Duty</b>: Gather intel and important items to corporation for rewards behind enemy's lines. Assist platoon advantage by sharing combat important information and marking enemy's fortifications, dont get yourself killed by any means. Be true commandos.
+	"}
+	minimap_icon = "intel_officer"
+
+/datum/job/terragov/command/intel_officer/radio_help_message(mob/M)
+	. = ..()
+	to_chat(M, {"You are charged with gathering important items from the ground and extracting them by fultons packs.
+Your duties are to ensure what none of NanoTrasen documents will be left behind and,
+none of important research results will be left on computers.
+Assist platoon advantage by intelligence and orbital bomb beacons.
+Dont forget to order scout clock and make the NT proud!"})
+
+/datum/outfit/job/command/intel_officer
+	name = INTELLIGENCE_OFFICER
+	jobtype = /datum/job/terragov/command/intel_officer
+
+	id = /obj/item/card/id/silver
+	back = /obj/item/storage/backpack/marine/standard/scav
+	belt = /obj/item/storage/belt/marine/smg25ap
+	ears = /obj/item/radio/headset/mainship/mcom
+	w_uniform = /obj/item/clothing/under/marine/veteran/pmc/leader/inof
+	wear_suit = /obj/item/clothing/suit/storage/marine/veteran/pmc
+	shoes = /obj/item/clothing/shoes/marine/full
+	gloves = /obj/item/clothing/gloves/marine/veteran/pmc
+	head = /obj/item/clothing/head/helmet/marine/veteran/pmc
+	r_store = /obj/item/storage/pouch/tools/full
+	l_store = /obj/item/storage/pouch/electronics/inof
+	suit_store = /obj/item/weapon/gun/smg/m25/elite
+	glasses = /obj/item/clothing/glasses/night/m56_goggles
+
+/datum/outfit/job/command/intel_officer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	. = ..()
+
+	H.equip_to_slot_or_del(new /obj/item/key/pod, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/beacon/supply_beacon, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/roller/medevac, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/medevac_beacon, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/storage/box/MRE, SLOT_IN_ACCESSORY)
+
+	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/plasma_pistol, SLOT_IN_SUIT)
+	H.equip_to_slot_or_del(new /obj/item/tool/extinguisher, SLOT_IN_SUIT)
+
+	H.equip_to_slot_or_del(new /obj/item/storage/box/orbital_beacons, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/storage/box/flashdrivers, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/explosive/plastique, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/explosive/plastique, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/research_product/money/uncommon, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_hand(new /obj/item/stack/sheet/metal/large_stack, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_hand(new /obj/item/stack/sheet/glass/large_stack, SLOT_IN_BACKPACK)
+
+	H.equip_to_slot_or_del(new /obj/item/reagent_containers/hypospray/autoinjector/combat_advanced, SLOT_IN_HEAD)
+	H.equip_to_slot_or_del(new /obj/item/reagent_containers/hypospray/autoinjector/combat_advanced, SLOT_IN_HEAD)
+
+/obj/item/storage/box/flashdrivers
+	name = "Box full of flashdrivers"
+	//icon_state = "flashdriver_box"
+	w_class = WEIGHT_CLASS_NORMAL
+	storage_slots = 7
+	spawn_type = /obj/item/devices/flashdriver
+	spawn_number = 7

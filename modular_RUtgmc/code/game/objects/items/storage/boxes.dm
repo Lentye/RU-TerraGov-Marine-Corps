@@ -93,3 +93,11 @@
 	desc = "A secure box holding 25 M45 Phosphorus trailblazer grenades. Warning: VERY flammable!!!"
 	spawn_type = /obj/item/explosive/grenade/sticky/trailblazer/phosphorus
 	closed_overlay = "grenade_box_overlay_M45_phosphorus"
+
+/obj/item/storage/box/orbital_beacons
+	name = "\improper Orbital Borbardment Beacons box"
+	desc = "Box full of orbital borbardment beacons"
+	storage_slots = 7
+	spawn_type = /obj/item/beacon/orbital_bombardment_beacon
+	w_class = WEIGHT_CLASS_NORMAL
+	spawn_number = 7

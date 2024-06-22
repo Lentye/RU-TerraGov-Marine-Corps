@@ -11,3 +11,5 @@
 #define EXP_TYPE_GHOST "Ghost"
 #define EXP_TYPE_ADMIN "Admin"
 #define EXP_TYPE_FACEHUGGER_STAT "Facehugger_Stat"
+
+#define INTEL_OFFICER "Intelligence Officer"

@@ -53,6 +53,7 @@
 #define CHIEF_SHIP_ENGINEER "Chief Ship Engineer"
 #define CHIEF_MEDICAL_OFFICER "Chief Medical Officer"
 #define CORPORATE_LIAISON "Corporate Liaison"
+#define INTELLIGENCE_OFFICER "Intelligence Officer"
 #define SYNTHETIC "Synthetic"
 #define SHIP_TECH "Ship Technician"
 #define MEDICAL_DOCTOR "Medical Doctor"
