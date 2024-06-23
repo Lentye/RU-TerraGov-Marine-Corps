@@ -101,3 +101,11 @@
 	spawn_type = /obj/item/beacon/orbital_bombardment_beacon
 	w_class = WEIGHT_CLASS_NORMAL
 	spawn_number = 7
+
+/obj/item/storage/box/flashdrivers
+	name = "Box full of flashdrivers"
+	//icon_state = "flashdriver_box"
+	w_class = WEIGHT_CLASS_NORMAL
+	storage_slots = 7
+	spawn_type = /obj/item/devices/flashdriver
+	spawn_number = 7

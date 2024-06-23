@@ -480,3 +480,76 @@
 
 /datum/ammo/bullet/spottingrifle/tungsten/on_hit_mob(mob/M,obj/projectile/P)
 	staggerstun(M, P, weaken = 2 SECONDS, stagger = 0.5 SECONDS, knockback = 1, max_range = 12)
+
+/obj/item/weapon/gun/rifle/standard_lmg/elite
+	name = "\improper MG-42-RAT Kauser light machine gun"
+	desc = "The Kauser MG-42 is the TGMC's current standard non-IFF-capable LMG. Got a bipod for deploying. It uses 10x24mm ammunition."
+
+	icon_state = GUN_ICONSTATE_LOADED
+	item_state = GUN_ICONSTATE_LOADED
+	item_icons = list(
+		slot_l_hand_str = /datum/greyscale_config/gun_inhand/t42,
+		slot_r_hand_str = /datum/greyscale_config/gun_inhand/r_hand/t42,
+		slot_back_str = /datum/greyscale_config/worn_gun/t42,
+		slot_s_store_str = /datum/greyscale_config/worn_gun/suit/t42,
+	)
+	inhand_x_dimension = 64
+	inhand_y_dimension = 32
+	flags_equip_slot = ITEM_SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
+	caliber = CALIBER_10X24_CASELESS //codex
+	max_shells = 120 //codex
+	force = 40
+	aim_slowdown = 1.2
+	wield_delay = 1 SECONDS
+	fire_sound = 'sound/weapons/guns/fire/tgmc/kinetic/gun_mg42.ogg'
+	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
+	unload_sound = 'sound/weapons/guns/interact/T42_unload.ogg'
+	reload_sound = 'sound/weapons/guns/interact/T42_reload.ogg'
+	default_ammo_type = /obj/item/ammo_magazine/standard_lmg
+	allowed_ammo_types = list(/obj/item/ammo_magazine/standard_lmg)
+	greyscale_config = /datum/greyscale_config/gun/gun64/t42
+	colorable_allowed = PRESET_COLORS_ALLOWED
+	attachable_allowed = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/flashlight/under,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonetknife,
+		/obj/item/attachable/bayonetknife/som,
+		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/marine,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/compensator,
+		/obj/item/weapon/gun/shotgun/combat/masterkey,
+	)
+	flags_item = IS_DEPLOYABLE|TWOHANDED
+	deployable_item = /obj/machinery/deployable/mounted
+	soft_armor = list(MELEE = 0, BULLET = 50, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 0, ACID = 0)
+	flags_gun_features = GUN_AMMO_COUNTER|GUN_SMOKE_PARTICLES
+	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC, GUN_FIREMODE_AUTOBURST)
+	gun_skill_category = SKILL_HEAVY_WEAPONS
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 17,"rail_x" = 4, "rail_y" = 20, "under_x" = 16, "under_y" = 14, "stock_x" = 0, "stock_y" = 13)
+	actions_types = list(/datum/action/item_action/aim_mode)
+	aim_fire_delay = 0.05 SECONDS
+	aim_speed_modifier = 1.5
+	deployed_scatter_change = -70
+	fire_delay = 0.15 SECONDS
+	burst_delay = 0.10 SECONDS
+	extra_delay = 0.05 SECONDS
+	accuracy_mult = 1.1
+	accuracy_mult_unwielded = 0.8
+	scatter = 2
+	scatter_unwielded = 45
+	movement_acc_penalty_mult = 6
+	damage_falloff_mult = 0.25
+	deploy_time = 1 SECONDS
+	undeploy_time = 0.5 SECONDS
+	max_integrity = 200

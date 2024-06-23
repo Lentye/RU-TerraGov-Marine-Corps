@@ -235,11 +235,3 @@ Dont forget to order scout clock and make the NT proud!"})
 
 	H.equip_to_slot_or_del(new /obj/item/reagent_containers/hypospray/autoinjector/combat_advanced, SLOT_IN_HEAD)
 	H.equip_to_slot_or_del(new /obj/item/reagent_containers/hypospray/autoinjector/combat_advanced, SLOT_IN_HEAD)
-
-/obj/item/storage/box/flashdrivers
-	name = "Box full of flashdrivers"
-	//icon_state = "flashdriver_box"
-	w_class = WEIGHT_CLASS_NORMAL
-	storage_slots = 7
-	spawn_type = /obj/item/devices/flashdriver
-	spawn_number = 7

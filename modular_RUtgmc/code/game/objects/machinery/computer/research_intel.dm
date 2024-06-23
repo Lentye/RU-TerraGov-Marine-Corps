@@ -38,7 +38,7 @@
 /obj/machinery/computer/research_intel/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "IntelComputer", "IntelComputer")
+		ui = new(user, src, "ResearchComputer", "ResearchComputer")
 		ui.open()
 
 /obj/machinery/computer/research_intel/ui_data(mob/user)
@@ -47,7 +47,7 @@
 	data["first_login"] = first_login
 	data["progress"] = progress
 	data["printing"] = printing
-	data["printed"] = printing_complete
+	data["copied"] = copying_complete
 
 	return data
 

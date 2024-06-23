@@ -234,3 +234,37 @@
 	if(beacon_datum)
 		beacon_datum.drop_location = get_turf(src)
 		addtimer(CALLBACK(src, PROC_REF(update_beacon_location), beacon_datum), 5 SECONDS)
+
+
+/obj/item/armor_module/module/valkyrie_autodoc/pmc
+	name = "\improper Valkyrie Automedical Armor System"
+	desc =  "Designed for mounting on modular armor. This module has advanced medical systems that inject large variability of chemicals based on the user's needs, as well as automatically securing the bones and body of the wearer, effectively splinting them until professional medical attention can be admistered. Will definitely impact mobility."
+	icon =	null
+	icon_state = null
+
+/obj/item/armor_module/module/valkyrie_autodoc/pmc/on_attach(obj/item/attaching_to, mob/user)
+	. = ..()
+	parent.AddComponent(/datum/component/suit_autodoc)
+	parent.AddElement(/datum/element/limb_support, supported_limbs)
+
+/obj/item/armor_module/module/valkyrie_autodoc/pmc/on_detach(obj/item/detaching_from, mob/user)
+	qdel(parent.GetComponent(/datum/component/suit_autodoc))
+	parent.RemoveElement(/datum/element/limb_support, supported_limbs)
+	return ..()
+
+/obj/item/armor_module/module/chemsystem/vampire
+	name = "Valipire chemical enchancement module"
+	desc = "Experimental version of vali module, capable to synthesize green blood from human blood"
+	icon = null
+	icon_state = null
+
+/obj/item/armor_module/module/chemsystem/vampire/on_attach(obj/item/attaching_to, mob/user)
+	. = ..()
+	var/datum/component/chem_booster/chemsystem = parent.AddComponent(/datum/component/chem_booster/vampire)
+	RegisterSignal(chemsystem, COMSIG_CHEMSYSTEM_TOGGLED, PROC_REF(update_module_icon))
+
+/obj/item/armor_module/module/chemsystem/vampire/on_detach(obj/item/detaching_from, mob/user)
+	var/datum/component/chem_booster/chemsystem = parent.GetComponent(/datum/component/chem_booster/vampire)
+	UnregisterSignal(chemsystem, COMSIG_CHEMSYSTEM_TOGGLED)
+	chemsystem.RemoveComponent()
+	return ..()

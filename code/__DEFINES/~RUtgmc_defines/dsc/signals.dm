@@ -71,3 +71,5 @@
 
 ///mob/living signals
 #define COMSIG_HUMAN_DEATH_STAGE_CHANGE "human_death_stage_change"
+
+#define COMSIG_KB_VALI_EXTRACTOR "keybinding_vali_extractor"
